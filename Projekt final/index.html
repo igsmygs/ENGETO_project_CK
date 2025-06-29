@@ -32,7 +32,7 @@
     </div>
 
     <script>
-      // Add active class to current nav item
+      
       document.querySelectorAll(".hlavni-navigace a").forEach((link) => {
         link.addEventListener("click", function () {
           document.querySelectorAll(".hlavni-navigace a").forEach((item) => {
@@ -40,7 +40,7 @@
           });
           this.classList.add("active");
 
-          // Close mobile menu after selection
+          
           const checkbox = document.getElementById("menu-toggle");
           checkbox.checked = false;
         });
