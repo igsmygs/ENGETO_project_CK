@@ -1,4 +1,4 @@
-/* Reset výchozích stylů */
+
 * {
   margin: 0;
   padding: 0;
@@ -246,7 +246,7 @@ body {
     padding: 60px 0;
   }
 }
-/* Sekce Služby - finální zarovnání */
+/* Sekce Služby */
 .sekce-sluzby {
   background-color: #33292a;
   padding: 80px 0;
@@ -387,7 +387,7 @@ body {
 
 /* Sekce Kam jet */
 .sekce-kam-jet {
-  background-color: #644b4f; /* Hnědé pozadí */
+  background-color: #644b4f; 
   padding: 80px 0;
   color: white;
 }
@@ -568,7 +568,7 @@ body {
 
 .mrizka-obrazky {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 sloupce na desktopu */
+  grid-template-columns: repeat(2, 1fr); 
 }
 
 .mrizka-polozka {
@@ -591,11 +591,11 @@ body {
 /* Responzivita - mobil */
 @media (max-width: 768px) {
   .mrizka-obrazky {
-    grid-template-columns: 1fr; /* 1 sloupec na mobilu */
+    grid-template-columns: 1fr; 
   }
 
   .mrizka-polozka img {
-    height: 300px; /* Pevná výška na mobilech */
+    height: 300px; 
   }
 }
 
