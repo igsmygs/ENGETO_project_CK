@@ -1,0 +1,649 @@
+/* Reset výchozích stylů */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Navigační menu */
+.hlavni-navigace {
+  background-color: #33292a;
+  padding: 2rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.hlavni-navigace ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 5.5rem;
+  padding: 0 2rem;
+}
+
+.hlavni-navigace a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s;
+  letter-spacing: 0.5px;
+}
+
+.hlavni-navigace a:hover {
+  color: #f0c14b;
+}
+
+.hlavni-navigace a.active {
+  border-bottom: 2px solid #f0c14b;
+}
+
+/* Mobile menu styles */
+.hamburger-menu {
+  display: none;
+}
+
+.menu-btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+.menu-btn > span::before {
+  content: "";
+  top: -8px;
+}
+.menu-btn > span::after {
+  content: "";
+  top: 8px;
+}
+
+#menu-toggle {
+  opacity: 0;
+  position: absolute;
+}
+
+#menu-toggle:checked ~ .menu-btn > span {
+  transform: rotate(45deg);
+}
+#menu-toggle:checked ~ .menu-btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu-toggle:checked ~ .menu-btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Responzivita */
+@media (max-width: 1024px) {
+  .hlavni-navigace ul {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hlavni-navigace ul {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hlavni-navigace {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #33292a;
+    transition: left 0.3s;
+    padding-top: 80px;
+  }
+
+  #menu-toggle:checked ~ .hlavni-navigace {
+    left: 0;
+  }
+
+  .hlavni-navigace ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 0;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+}
+
+/* Hero sekce */
+.hero-sekce {
+  background-image: url("images/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: calc(100vh - 56px);
+  position: relative;
+}
+
+.hero-text {
+  max-width: 1200px;
+  position: absolute;
+  bottom: 10%;
+  right: 20%;
+  width: 100%;
+  text-align: right;
+}
+
+.text-obal h1 {
+  color: white;
+  font-size: 7rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Sekce O nás */
+.sekce-o-nas {
+  background: white;
+  padding: 110px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.obsah-o-nas {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.text-o-nas {
+  flex: 1;
+}
+
+.text-o-nas h2 {
+  font-size: 2.2rem;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.text-o-nas p {
+  font-size: 1.1rem;
+  font-weight: bolder;
+  line-height: 1.6;
+  color: black;
+}
+
+.obrazek-o-nas {
+  flex: 1;
+}
+
+.obrazek-o-nas img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Responzivita */
+@media (max-width: 992px) {
+  .obsah-o-nas {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hlavni-navigace ul {
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+
+  .text-obal h1 {
+    font-size: 2.5rem;
+  }
+
+  .obsah-o-nas {
+    flex-direction: column;
+  }
+
+  .obrazek-o-nas {
+    width: 100%;
+    height: 300px;
+  }
+
+  .sekce-o-nas {
+    padding: 60px 0;
+  }
+}
+/* Sekce Služby - finální zarovnání */
+.sekce-sluzby {
+  background-color: #33292a;
+  padding: 80px 0;
+  color: white;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.popis-sluzeb {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.ikonky-sluzeb {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.sluzba {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sluzba img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  margin-bottom: 15px;
+}
+
+.sluzba p {
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* Responzivita */
+@media (max-width: 992px) {
+  .ikonky-sluzeb {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .ikonky-sluzeb {
+    grid-template-columns: 1fr;
+  }
+
+  .sluzba {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
+
+.sekce-zajezdy {
+  padding: 90px 0;
+  background: white;
+}
+
+.mrizka-zajezdy {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.zajezd-item {
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.zajezd-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.textovy-ctverec {
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ctverec-obsah {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+}
+
+/* Mobilní verze */
+@media (max-width: 576px) {
+  .mrizka-zajezdy {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 0 20px;
+  }
+
+  .zajezd-item {
+    aspect-ratio: unset;
+    height: auto;
+  }
+
+  .zajezd-item img {
+    height: auto;
+    max-height: 300px;
+  }
+
+  .textovy-ctverec {
+    height: 80px; /* Pevná výška */
+    aspect-ratio: unset;
+  }
+
+  .ctverec-obsah {
+    font-size: 1.5rem;
+  }
+}
+
+/* Sekce Kam jet */
+.sekce-kam-jet {
+  background-color: #644b4f; /* Hnědé pozadí */
+  padding: 80px 0;
+  color: white;
+}
+
+.kam-jet-obsah {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nadpis-kam-jet h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.text-kam-jet p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.tlacitko-kontakt {
+  background: white;
+  color: #644b4f;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-top: 20px;
+}
+
+.tlacitko-kontakt:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responzivita */
+@media (max-width: 992px) {
+  .kam-jet-obsah {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .nadpis-kam-jet h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .nadpis-kam-jet h2 {
+    font-size: 2rem;
+  }
+
+  .text-kam-jet p {
+    font-size: 1rem;
+  }
+
+  .tlacitko-kontakt {
+    padding: 10px 25px;
+  }
+}
+
+/* Sekce Recenze */
+.sekce-recenze {
+  padding: 80px 0;
+  background: white;
+}
+
+.recenze-header {
+  max-width: 400px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.recenze-header h2 {
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.recenze-uvod {
+  font-size: 1.1rem;
+  font-weight: bolder;
+  line-height: 1.6;
+  color: black;
+}
+
+.recenze-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.recenze-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.recenze-foto {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.recenze-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recenze-text {
+  max-width: 400px;
+}
+
+.recenze-text p {
+  font-size: 1rem;
+  font-weight: bolder;
+  line-height: 1.6;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.recenze-jmeno {
+  font-weight: bold;
+  color: black;
+  font-size: 1.6rem;
+}
+
+/* Responzivita */
+@media (max-width: 992px) {
+  .recenze-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .recenze-item {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .recenze-header {
+    margin-bottom: 40px;
+    padding: 0 20px;
+  }
+
+  .recenze-foto {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+  }
+
+  .recenze-text {
+    padding: 0 15px;
+  }
+}
+
+/* Sekce s mřížkou obrázků */
+.sekce-mrizka {
+  width: 100%;
+  overflow: hidden;
+}
+
+.mrizka-obrazky {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 sloupce na desktopu */
+}
+
+.mrizka-polozka {
+  position: relative;
+  overflow: hidden;
+}
+
+.mrizka-polozka img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.mrizka-polozka img:hover {
+  transform: scale(1.03);
+}
+
+/* Responzivita - mobil */
+@media (max-width: 768px) {
+  .mrizka-obrazky {
+    grid-template-columns: 1fr; /* 1 sloupec na mobilu */
+  }
+
+  .mrizka-polozka img {
+    height: 300px; /* Pevná výška na mobilech */
+  }
+}
+
+/* Patička */
+.paticka {
+  background-color: #333;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.paticka .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.kontakt-link {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: underline;
+  display: inline-block;
+  margin-bottom: 15px;
+  transition: color 0.3s;
+}
+
+.kontakt-link:hover {
+  color: #f0c14b;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* Responzivita */
+@media (max-width: 768px) {
+  .paticka {
+    padding: 30px 0;
+  }
+
+  .kontakt-link {
+    font-size: 1.1rem;
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+  }
+}

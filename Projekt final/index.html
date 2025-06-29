@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cestovní kancelář</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigační menu -->
+    <nav class="hlavni-navigace">
+      <ul>
+        <li><a href="#o-nas">About Us</a></li>
+        <li><a href="#sluzby">What We Do</a></li>
+        <li><a href="#zajezdy">Our Trips</a></li>
+        <li><a href="#kam-jet">Where to go</a></li>
+        <li><a href="#recenze">Reviews</a></li>
+      </ul>
+    </nav>
+
+    <div class="hamburger-menu">
+      <input id="menu-toggle" type="checkbox" />
+      <label class="menu-btn" for="menu-toggle">
+        <span></span>
+      </label>
+    </div>
+
+    <script>
+      // Add active class to current nav item
+      document.querySelectorAll(".hlavni-navigace a").forEach((link) => {
+        link.addEventListener("click", function () {
+          document.querySelectorAll(".hlavni-navigace a").forEach((item) => {
+            item.classList.remove("active");
+          });
+          this.classList.add("active");
+
+          // Close mobile menu after selection
+          const checkbox = document.getElementById("menu-toggle");
+          checkbox.checked = false;
+        });
+      });
+    </script>
+
+    <!-- Hero sekce -->
+    <section class="hero-sekce">
+      <div class="hero-text">
+        <div class="text-obal">
+          <h1>Your</h1>
+          <h1>Travel</h1>
+          <h1>Assistant</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sekce About Us -->
+    <section id="o-nas" class="sekce-o-nas">
+      <div class="container">
+        <div class="obsah-o-nas">
+          <div class="text-o-nas">
+            <h2>About Us</h2>
+            <p>
+              Leigh McAdam is a Calgary-based writer, photographer and social
+              media enthusiast with over 48,000 followers. Her blog:
+              HikeBikeTravel is frequently cited as one of the top travel and
+              outdoor adventure blogs in Canada, and consistently receives over
+              135,000 monthly page views. She shares her enthusiasm for the
+              outdoors as a brand ambassador for Sporting Life, and has worked
+              on campaigns for Travel Alberta, Expedia and Flight Hub. Leigh is
+              the author of Discover Canada: 100 Inspiring Outdoor Adventures.
+              Currently, she is co-authoring: 125 Nature Hot Spots in Alberta
+              (spring 2018). A true adventurer, Leigh will try anything once,
+              except perhaps bungee jumping.
+            </p>
+          </div>
+          <div class="obrazek-o-nas">
+            <img
+              src="images/anneliese-phillips-uv4-vl3liKM-unsplash.jpg"
+              alt="Leigh McAdam"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sluzby" class="sekce-sluzby">
+      <div class="container">
+        <h2 class="text-center">What We Do</h2>
+        <p class="popis-sluzeb">
+          Opportunities for challenging hikes and pleasant strolls are scattered
+          all over this planet; you just need to know where to find them. We do.
+          Kilimanjaro, Everest Base Camp, Patagonia, and the Inca Trail are out
+          there, waiting for you to walk all over them. We're proud of our
+          record of successful ascents (over 92% of our travellers make it to
+          the top of Kili, depending on the route), but it's our CEOs and local
+          guides that make the journey itself as memorable as the summit. And if
+          you're not into big climbs, don't sweat it; we've got loads of
+          lower-impact walks and iconic treks you'll love, too.
+        </p>
+
+        <div class="ikonky-sluzeb">
+          <div class="sluzba">
+            <img src="images/hiking-white.png" alt="Hiking" />
+            <p>Hiking</p>
+          </div>
+          <div class="sluzba">
+            <img src="images/cycle-white.png" alt="Cycling" />
+            <p>Cycling</p>
+          </div>
+          <div class="sluzba">
+            <img src="images/water-white.png" alt="Surfing" />
+            <p>Surfing</p>
+          </div>
+          <div class="sluzba">
+            <img src="images/car-white.png" alt="Car trips" />
+            <p>Car trips</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="zajezdy" class="sekce-zajezdy">
+      <div class="container">
+        <div class="mrizka-zajezdy">
+          <!-- První řádek -->
+          <div class="zajezd-item">
+            <img
+              src="images/simon-english-48nerZQCHgo-unsplash.jpg"
+              alt="Trip 1"
+            />
+          </div>
+          <div class="zajezd-item">
+            <img
+              src="images/james-wheeler-ZOA-cqKuJAA-unsplash.jpg"
+              alt="Trip 2"
+            />
+          </div>
+          <div class="zajezd-item">
+            <img
+              src="images/daniel-tseng-73lmMKhi2U8-unsplash.jpg"
+              alt="Trip 3"
+            />
+          </div>
+
+          <!-- Druhý řádek -->
+          <div class="zajezd-item">
+            <img
+              src="images/james-wheeler-ZOA-cqKuJAA-unsplash.jpg"
+              alt="Trip 4"
+            />
+          </div>
+          <div class="zajezd-item textovy-ctverec">
+            <div class="ctverec-obsah">Our Trips</div>
+          </div>
+          <div class="zajezd-item">
+            <img
+              src="images/holly-mandarich-UVyOfX3v0Ls-unsplash.jpg"
+              alt="Trip 5"
+            />
+          </div>
+
+          <!-- Třetí řádek -->
+          <div class="zajezd-item">
+            <img
+              src="images/chung-yee-tsang-wqxCKM0R6R8-unsplash.jpg"
+              alt="Trip 6"
+            />
+          </div>
+          <div class="zajezd-item">
+            <img
+              src="images/julian-bialowas-ilkTnuMunP8-unsplash.jpg"
+              alt="Trip 7"
+            />
+          </div>
+          <div class="zajezd-item">
+            <img
+              src="images/matej-drha-rbDzMcJsBkY-unsplash.jpg"
+              alt="Trip 8"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kam-jet" class="sekce-kam-jet">
+      <div class="container">
+        <div class="kam-jet-obsah">
+          <div class="nadpis-kam-jet">
+            <h2>Where do you</h2>
+            <h2>want to go?</h2>
+          </div>
+          <div class="text-kam-jet">
+            <p>
+              Where do you want to go? You'll find 21 detailed adventure guides,
+              over a hundred practical travel tips, book reviews on anything
+              outdoors related, packing lists on a range of outdoor activities
+              including kayaking, backpacking and camping as well as honest
+              hotel and B&B reviews.
+            </p>
+            <p>Contact us and we will help you!</p>
+            <button class="tlacitko-kontakt">CONTACT US</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="recenze" class="sekce-recenze">
+      <div class="container">
+        <div class="recenze-header">
+          <h2>Reviews</h2>
+          <p class="recenze-uvod">
+            Our amazing clients are the reason we exist, and their reactions to
+            our customized travel experiences and personalized service keep us
+            smiling all day long. Here is just a sampling of what they've said:
+          </p>
+        </div>
+
+        <div class="recenze-grid">
+          <!-- First Review -->
+          <div class="recenze-item">
+            <div class="recenze-foto">
+              <img
+                src="images/kalen-emsley-kGSapVfg8Kw-unsplash.jpg"
+                alt="Bertie Norton"
+              />
+            </div>
+            <div class="recenze-text">
+              <p>
+                "She has booked two major European trips for us in the past year
+                and every aspect has met, and in most cases exceeded, our
+                expectations. Best prices, best hotels, best itineraries, and
+                best cruises, she does it all. But the most important thing is
+                she remembers the little things that we would do if we were
+                making the plans ourselves."
+              </p>
+              <p class="recenze-jmeno">Bertie Norton</p>
+            </div>
+          </div>
+
+          <!-- Second Review -->
+          <div class="recenze-item">
+            <div class="recenze-foto">
+              <img
+                src="images/jeffrey-keenan-pUhxoSapPFA-unsplash.jpg"
+                alt="Frank Kinney"
+              />
+            </div>
+            <div class="recenze-text">
+              <p>
+                "Leigh McAdam has been making my travel arrangements for about
+                20 years and there is no one else I would trust to arrange my
+                trips and tours. I've also had great fun on a few of the group
+                trips she has arranged - Peru & Machu Picchu and a 10-day cruise
+                out of Venice and diving. It's always an eclectic group of well
+                traveled, interesting people."
+              </p>
+              <p class="recenze-jmeno">Frank Kinney</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sekce-mrizka">
+      <div class="mrizka-obrazky">
+        <div class="mrizka-polozka">
+          <img
+            src="images/alexey-fedenkov-BaCZYH9RLmQ-unsplash.jpg"
+            alt="Travel image 1"
+          />
+        </div>
+        <div class="mrizka-polozka">
+          <img
+            src="images/omer-salom-LoijtQXXNhs-unsplash.jpg"
+            alt="Travel image 2"
+          />
+        </div>
+        <div class="mrizka-polozka">
+          <img
+            src="images/vincentiu-solomon-7MH4ped6_Mo-unsplash.jpg"
+            alt="Travel image 3"
+          />
+        </div>
+        <div class="mrizka-polozka">
+          <img
+            src="images/daniel-tseng-73lmMKhi2U8-unsplash.jpg"
+            alt="Travel image 4"
+          />
+        </div>
+      </div>
+    </section>
+
+    <footer class="paticka">
+      <div class="container">
+        <a href="#" class="kontakt-link">Contact</a>
+        <p class="copyright">
+          © 2022 - Your Travel Assistant. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
